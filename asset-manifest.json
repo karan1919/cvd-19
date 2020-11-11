@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/karan1919/cvd-19.git/static/js/main.3bc4a656.chunk.js",
+    "main.js.map": "/karan1919/cvd-19.git/static/js/main.3bc4a656.chunk.js.map",
+    "runtime-main.js": "/karan1919/cvd-19.git/static/js/runtime-main.2a767525.js",
+    "runtime-main.js.map": "/karan1919/cvd-19.git/static/js/runtime-main.2a767525.js.map",
+    "static/js/2.73beec50.chunk.js": "/karan1919/cvd-19.git/static/js/2.73beec50.chunk.js",
+    "static/js/2.73beec50.chunk.js.map": "/karan1919/cvd-19.git/static/js/2.73beec50.chunk.js.map",
+    "index.html": "/karan1919/cvd-19.git/index.html",
+    "precache-manifest.a8918ed8e997d26c2c9ebd7b66734578.js": "/karan1919/cvd-19.git/precache-manifest.a8918ed8e997d26c2c9ebd7b66734578.js",
+    "service-worker.js": "/karan1919/cvd-19.git/service-worker.js",
+    "static/js/2.73beec50.chunk.js.LICENSE.txt": "/karan1919/cvd-19.git/static/js/2.73beec50.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a767525.js",
+    "static/js/2.73beec50.chunk.js",
+    "static/js/main.3bc4a656.chunk.js"
+  ]
+}
