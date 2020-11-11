@@ -1,0 +1,8 @@
+{
+  "short_name": "Covid19 tracker",
+  "name": "Covid 19 tracker with Chakra UI",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
