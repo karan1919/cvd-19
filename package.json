@@ -2,7 +2,7 @@
   "name": "cvd-19",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/karan1919/cvd-19.git",
+  "homepage": "https://karan1919.github.io/cvd-19",
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.35",
