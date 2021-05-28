@@ -1,11 +1,16 @@
+const darkBackgroundColor = { backgroundColor: "#1A202C" };
+const lightBackgroundColor = { backgroundColor: "#fff" };
+
+const addStyles = (obj, styles) => {
+  return { ...obj, ...styles };
+};
+
 export const backgroundColor = (colorMode, styles) => {
-  const darkBackgorundColor = { backgroundColor: "#1A202C" };
-  const lightBackgroundColor = { backgroundColor: "#fff" };
-  if (styles) {
-    if (colorMode === "dark") return { ...darkBackgorundColor, ...styles };
-    return { ...lightBackgroundColor, ...styles };
+  if (colorMode === "dark") {
+    if (styles) addStyles(darkBackgroundColor, styles);
+    return { ...darkBackgroundColor };
   } else {
-    if (colorMode === "dark") return { ...darkBackgorundColor };
+    if (styles) addStyles(lightBackgroundColor, styles);
     return { ...lightBackgroundColor };
   }
 };
