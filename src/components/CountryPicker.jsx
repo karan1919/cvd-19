@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { fetchCountries } from "../api";
-import { backgroundColor } from "../utils/backgroundColor";
 import { Select, Tooltip, useColorMode } from "@chakra-ui/core";
+import { backgroundColor } from "../utils/backgroundColor";
+import { getCountries } from "../services/countryService";
+import { toast } from "react-toastify";
 
 const CountryPicker = ({ handleCountryChange }) => {
   const [fetchedCountries, setFetchedCountries] = useState([]);
   const { colorMode } = useColorMode();
 
   useEffect(() => {
-    const fetchAPI = async () => {
-      setFetchedCountries(await fetchCountries());
+    const fetchCountries = async () => {
+      try {
+        setFetchedCountries(await getCountries());
+      } catch (ex) {
+        if (ex.response && ex.response.status === 404) {
+          toast.error("Failed to fetch country list.");
+        }
+        setFetchedCountries([]);
+      }
     };
-    fetchAPI();
+    fetchCountries();
   }, [setFetchedCountries]);
 
   return (
@@ -25,11 +33,16 @@ const CountryPicker = ({ handleCountryChange }) => {
           <option value="" style={backgroundColor(colorMode)}>
             Global
           </option>
-          {fetchedCountries.map((country, i) => (
-            <option key={i} value={country} style={backgroundColor(colorMode)}>
-              {country}
-            </option>
-          ))}
+          {fetchedCountries.length &&
+            fetchedCountries.map((country, i) => (
+              <option
+                key={i}
+                value={country}
+                style={backgroundColor(colorMode)}
+              >
+                {country}
+              </option>
+            ))}
         </Select>
       </Tooltip>
     </>
